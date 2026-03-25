@@ -1,0 +1,11 @@
+.env
+test.py
+neo4j_data/
+neo4j_import/
+AMLvenv/
+.venv/
+env/
+lib/
+bin/
+data/
+*.csv
