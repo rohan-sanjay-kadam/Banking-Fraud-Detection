@@ -3,13 +3,16 @@ from neo4j import GraphDatabase
 from tqdm import tqdm
 import warnings
 warnings.filterwarnings("ignore")
-
+import os
+from dotenv import load_dotenv
 # ========================= CONFIG =========================
+load_dotenv()
+
 TRANS_CSV_PATH = "data/HI-Small_Trans.csv"
 SAMPLE_ACCOUNTS = 50000                    # Safe for your 8GB RAM laptop
 NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
-NEO4J_PASSWORD = "Optimisticbull@7"
+NEO4J_PASSWORD = os.getenv("DOCKER_PASSWORD")
 
 print("=== AML Fund Flow Tracker - Neo4j Setup ===\n")
 
